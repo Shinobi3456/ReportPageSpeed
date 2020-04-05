@@ -4,7 +4,7 @@
 Author: Vyacheslav Razvodov (shinobi3456@gmail.com)
 
 Generate a site performance report based on GooglePage Speed’s data. 
-he report is generated in Google Sheets, for a given list of URLs.
+The report is generated in Google Sheets, for a given list of URLs.
 
 start.py - Creates or updates a report file.
 
