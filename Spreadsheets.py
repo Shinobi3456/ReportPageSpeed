@@ -183,3 +183,13 @@ class Spreadsheet:
         self.requests.append({"updateCells": {"range": self.toGridRange(cellsRange),
                                               "rows": [{"values": [{"userEnteredFormat": cellFormat} for cellFormat in rowFormats]} for rowFormats in formatsJSON],
                                               "fields": fields}})
+
+    # Position - top, left, right, bottom
+    # Style  -  SOLID, DOTTED, DASHED ...
+    def prepare_setCellsBorders(self, cellsRange, position, style="SOLID", width=1):
+        self.requests.append({"updateBorders": {"range": self.toGridRange(cellsRange),
+                                                position: {'style': style, 'width': width,
+                                                          'color': {'red': 0, 'green': 0, 'blue': 0, 'alpha': 1}
+                                                          }
+                                                }
+                              })
